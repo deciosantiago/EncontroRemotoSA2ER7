@@ -189,7 +189,7 @@ namespace Encontro_Remoto
                         PessoaJuridica Pj = new PessoaJuridica();
 
 
-                        Console.WriteLine($"Digite o número do Cpf (somente números)");
+                        Console.WriteLine($"Digite o número do Cnpj (somente números)");
                         Pj.cnpj = int.Parse(Console.ReadLine());
 
                         Console.WriteLine($"Digite Sua Razão Social");
