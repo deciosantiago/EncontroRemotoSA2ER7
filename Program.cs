@@ -44,9 +44,9 @@ namespace Encontro_Remoto
 |                                          |
 |              Pessoa Jurídica             |
 |                                          |
-|  5 - Cadastrar Jurídica                  |
-|  6 - Lista Jurídica                      |
-|  7 - Remove Jurídica                     |
+|  4 - Cadastrar Jurídica                  |
+|  5 - Lista Jurídica                      |
+|  6 - Remove Jurídica                     |
 |  0 - Sair                                |
 |                                          |
 ============================================    
@@ -148,7 +148,7 @@ namespace Encontro_Remoto
                     case "3":
 
                         Console.WriteLine($"Digite o CPF que deseja remover");
-                        int cpfprocurado = Console.ReadLine();
+                       float cpfprocurado = Console.ReadLine();
 
                         PessoaFisica pessoaEncontrada ListPf.Find(cadaItem => cadaItem.cpf == cpfprocurado);
 
@@ -185,22 +185,7 @@ namespace Encontro_Remoto
                         endPj.complemento = Console.ReadLine();
 
 
-                        Console.WriteLine($"Este endereço é comercial? S/N");
-                        string enderecoPj = Console.ReadLine().ToUpper();
-
-                        if (enderecoPj == "S")
-                        {
-                            end.enderecoComercial = true;
-                        }
-                        else
-                        {
-                            end.enderecoComercial = false;
-                        }
-
-
-
-
-
+                        
                         PessoaJuridica Pj = new PessoaJuridica();
 
 
@@ -216,7 +201,7 @@ namespace Encontro_Remoto
                         break;
 
 
-                    case "6":
+                    case "5":
 
                         foreach (var cadaItemPj in ListPj)
                         {
@@ -228,10 +213,10 @@ namespace Encontro_Remoto
 
 
 
-                    case "7":
+                    case "6":
 
                         Console.WriteLine($"Digite o CNPJ que deseja remover");
-                        string cnpjProcurado = Console.ReadLine();
+                        float cnpjProcurado = Console.ReadLine();
 
                         PessoaJuridica pessoaPjEncontrada ListPj.Find(cadaItem => cadaItem.cnpj == cnpjProcurado);
 
